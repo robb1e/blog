@@ -30,7 +30,7 @@ A second option is to model the object explicitly and serialise the internal mod
 	  end
 	end
 	
-The benefit of doing this is a separation of concerns between your data model and the data presentation. An application model doesn't need to know how it'll be represented by an API, command line interface or any other outside communication mechanism. You may lose some of the Rails `respond_with` goodness with this:
+The benefit of doing this is a separation of concerns between your data model and the data presentation. An application model doesn't need to know how it'll be represented by an API, command line interface or any other outside communication mechanism. If an application were tending more towards [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS) for instance this separation could help resolve hyperlinks relevant to the interface. You may lose some of the Rails `respond_with` goodness with this:
 
 	respond_to :html, :json
 	
